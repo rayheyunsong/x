@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "quant_platform"
+version = "0.1.0"
+description = "Extensible personal quantitative trading platform"
+authors = [{name = "Your Name"}]
+requires-python = ">=3.10"
+dependencies = [
+    "pandas>=2.0",
+    "yfinance>=0.2",
+    "typer>=0.9",
+    "pydantic>=2.0",
+    "matplotlib>=3.8"
+]
+
+[project.scripts]
+quant-platform = "quant_platform.main:app"
+
+[tool.setuptools]
+packages = ["quant_platform"]
